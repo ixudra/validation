@@ -90,7 +90,7 @@ class ValidationServiceProvider extends ServiceProvider {
 
     public function provides()
     {
-        return array('IxdVal.IxudraValidator');
+        return array('IxdVal.validator');
     }
 
 }
