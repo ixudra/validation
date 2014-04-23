@@ -1,7 +1,7 @@
 {
     "name": "ixudra/validation",
     "description": "Custom Laravel 4 validation library - developer by Ixudra",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "keywords": ["Ixudra", "Laravel", "Validation"],
     "homepage": "http://ixudra.be",
     "license": "MIT",
