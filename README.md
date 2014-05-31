@@ -15,7 +15,7 @@ Pull this package in through Composer.
 ```js
 {
     "require": {
-        "ixudra/validation": "dev-master"
+        "ixudra/validation": "0.1.*"
     }
 }
 ```

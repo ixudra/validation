@@ -23,6 +23,9 @@
         'arraySize'                                 => 'The size of :attribute must be equal to :value.',
         'oneOrMoreSelected'                         => 'One or more items from the :attribute must be selected.',
 
+        // JSON
+        'json'                                      => 'The :attribute must be a valid JSON.',
+
         // Telephone
         'telephoneNumber'                           => 'The :attribute must be a valid telephone number.',
 

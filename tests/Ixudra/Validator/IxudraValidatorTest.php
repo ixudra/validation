@@ -429,6 +429,61 @@ class IxudraValidatorTest extends \PHPUnit_Framework_TestCase {
 
 
     // ============================================================================================================
+    //      JSON
+    // ============================================================================================================
+
+    /**
+     * @covers IxudraValidator::validateJson()
+     */
+    public function testValidateJson_returnsTrueIfJsonIsValid()
+    {
+        $this->makeValidator( array(), array(), array() );
+
+        $this->assertTrue( self::$validator->validateJson(null, '{"menu": {"id": "file","value": "File","popup": {"menuitem": [{"value": "New", "onclick": "CreateNewDoc()"},{"value": "Open", "onclick": "OpenDoc()"},{"value": "Close", "onclick": "CloseDoc()"}]}}}', null) );
+    }
+
+    /**
+     * @covers IxudraValidator::validateJson()
+     */
+    public function testValidateJson_returnsFalseIfJsonIsNotValid()
+    {
+        $this->makeValidator( array(), array(), array() );
+
+        $this->assertFalse( self::$validator->validateJson(null, '{"menu": {"id": "file","value": "File","popup": {"menuitem": {"value": "New", "onclick": "CreateNewDoc()"},{"value": "Open", "onclick": "OpenDoc()"},{"value": "Close", "onclick": "CloseDoc()"}]}}}', null) );
+    }
+
+    /**
+     * @covers IxudraValidator::validateJson()
+     */
+    public function testValidateJson_returnsFalseIfValueIsInteger()
+    {
+        $this->makeValidator( array(), array(), array() );
+
+        $this->assertFalse( self::$validator->validateJson(null, 15, null) );
+    }
+
+    /**
+     * @covers IxudraValidator::validateJson()
+     */
+    public function testValidateJson_returnsFalseIfValueIsString()
+    {
+        $this->makeValidator( array(), array(), array() );
+
+        $this->assertFalse( self::$validator->validateJson(null, 'Foo', null) );
+    }
+
+    /**
+     * @covers IxudraValidator::validateJson()
+     */
+    public function testValidateJson_returnsFalseIfValueIsTruthy()
+    {
+        $this->makeValidator( array(), array(), array() );
+
+        $this->assertFalse( self::$validator->validateJson(null, true, null) );
+    }
+
+
+    // ============================================================================================================
     //      Telephone
     // ============================================================================================================
 
