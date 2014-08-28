@@ -72,7 +72,11 @@ class ValidationServiceProvider extends ServiceProvider {
     {
         foreach( $this->rules as $rule ) {
             $method = 'validate' . studly_case($rule);
-            $translation = $this->app['translator']->get('IxdVal::validation');
+            if( $this->app['translator']->has('IxdVal::validation') ) {
+                $translation = $this->app['translator']->get('IxdVal::validation');
+            } else {
+                $translation = $this->app['translator']->get('IxdVal::validation', array(), 'en');
+            }
 
             $this->app['validator']->extend($rule, 'Ixudra\Validation\IxudraValidator@' . $method, $translation[$rule]);
         }
