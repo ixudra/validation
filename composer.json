@@ -1,7 +1,7 @@
 {
     "name": "ixudra/validation",
     "description": "Custom Laravel 4 validation library - developer by Ixudra",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": ["Ixudra", "Laravel", "Validation"],
     "homepage": "http://ixudra.be",
     "license": "MIT",
@@ -15,9 +15,7 @@
 
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": ">=4.2",
-        "illuminate/translation": ">=4.2",
-        "illuminate/validation": ">=4.2"
+        "illuminate/support": ">=4.2"
     },
 
     "require-dev": {
@@ -26,9 +24,6 @@
     },
 
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
         "psr-0": {
             "Ixudra\\Validation\\": "src/"
         }
