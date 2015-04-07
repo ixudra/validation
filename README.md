@@ -94,4 +94,65 @@ rules that Laravel already provides to you:
 ```
 
 
+
+## Available validation methods
+
+### Array Validation
+
+- **arraySize**: validates the size of an array
+- **oneOrMoreSelected**: returns `true` if an array contains an entry where the value is `true`
+
+
+### Date Validation
+
+- **past**: returns `true` if the value contains a date which is set in the past
+- **future**: returns `true` if the value contains a date which is set in the future (not including today)
+- **lessThanThreeDaysOld**: returns `true` if the value contains a date which is set less that three days in the past
+- **todayOrLater**: returns `true` if the value contains a date which is set in the future (including today)
+
+
+### File Validation
+
+- **uniqueFileName**: returns `true` if the value a unique file name. This function expects the full path name of the file starting from the Laravel `public/` directory
+
+
+### JSON Validation
+
+- **json**: returns `true` is the value contains a valid JSON string
+
+
+### Password Validation
+
+- **validPassword**: returns `true` is the value contains a valid password (at least 6 characters long, at least one lowercase letter, at least one uppercase letter and at least one number) 
+- **correctPassword**: returns `true` if the value contains the correct password for the authenticated user (does not try to re-authenticate the user)
+
+
+### String Validation
+
+- **empty**: returns `true` if the value contains an empty string
+
+
+### Telephone Validation
+
+- **telephoneNumber**: returns `true` if the value contains a valid (Belgian) telephone number
+
+
+### Time Validation
+
+- **time**: returns `true` if the value contains a valid timestamp
+- **timeFormat**: returns `true` if the value contains a timestamp with the specified format
+
+
+### Truthy Validation
+
+- **truthy**: returns `true` if the value is either `true` of `false`
+- **true**: returns `true` if the value is `true`
+
+
+### User Validation
+
+- **emailBelongsToAuthenticatedUser**: returns `true` if the value contains an email address which belongs to the authenticated user
+- **idBelongsToAuthenticatedUser**: returns `true` if the value contains an ID which belongs to the authenticated user 
+
+
 Have fun!
