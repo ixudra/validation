@@ -121,6 +121,12 @@ rules that Laravel already provides to you:
 - **json**: returns `true` is the value contains a valid JSON string
 
 
+### Number Validation
+
+- **positive**: returns `true` is the value larger than 0
+- **negative**: returns `true` if the value is smaller than 0
+
+
 ### Password Validation
 
 - **validPassword**: returns `true` is the value contains a valid password (at least 6 characters long, at least one lowercase letter, at least one uppercase letter and at least one number) 
