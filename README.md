@@ -1,14 +1,14 @@
-Validation
-==========
+ixudra/validation
+======================
 
 Custom PHP validation library - developed by Ixudra.
 
 This package provides a wide variety of validation rules for PHP web applications. These rules can be used to easily validate
 user input to make sure that it meets the requirements that you have set.
 
-Please also note that this package is intended for, but not exclusive to the Laravel 4 framework. This basically means that
-most validation methods are universally usable in any PHP application but some make use of internal Laravel 4 components
-(e.g. see ```UserValidationTrait```). These methods will probably not work correctly unless you also include the used dependencies
+Please also note that this package is intended for, but not exclusive to the Laravel framework. This basically means that
+most validation methods are universally usable in any PHP application but some make use of internal Laravel components
+(e.g. see `UserValidationTrait`). These methods will probably not work correctly unless you also include the used dependencies
 in you application as well.
 
 This package can be used by anyone at any given time, but keep in mind that it is optimized for my personal custom
@@ -34,7 +34,7 @@ Pull this package in through Composer.
 
 ## Laravel usage
 
-To use this package with Laravel 4, you will have to extend the default validator class. Once this class is created, you can
+To use this package with Laravel 4 or 5, you will have to extend the default validator class. Once this class is created, you can
 include the traits into the class to make use of the validation methods. Laravel will automatically pick up the validation
 rules and make them available to you. Note that you don't have to include all traits if you don't want to. All validation
 rules are completely independent, which allows for maximum customization.
@@ -59,7 +59,7 @@ rules are completely independent, which allows for maximum customization.
 
 ```
 
-Next, you will need to add the following to your ```routes.php``` to let Laravel know that you want to use your custom validator
+Next, you will need to add the following to your `routes.php` to let Laravel know that you want to use your custom validator
 class instead of the default one:
 
 ```php
@@ -71,7 +71,7 @@ class instead of the default one:
 
 ```
 
-Congratulations, you are all set to go. You can now include the custom validation rules in the same way you use the default
+Once this is done, you are all set to go. You can now include the custom validation rules in the same way you use the default
 rules that Laravel already provides to you:
 
 ```php
@@ -99,21 +99,21 @@ rules that Laravel already provides to you:
 
 ### Array Validation
 
-- **arraySize**: validates the size of an array
-- **oneOrMoreSelected**: returns `true` if an array contains an entry where the value is `true`
+- **array_size**: validates the size of an array
+- **one_or_more_selected**: returns `true` if an array contains an entry where the value is `true`
 
 
 ### Date Validation
 
 - **past**: returns `true` if the value contains a date which is set in the past
 - **future**: returns `true` if the value contains a date which is set in the future (not including today)
-- **lessThanThreeDaysOld**: returns `true` if the value contains a date which is set less that three days in the past
-- **todayOrLater**: returns `true` if the value contains a date which is set in the future (including today)
+- **less_than_three_days_old**: returns `true` if the value contains a date which is set less that three days in the past
+- **today_or_later**: returns `true` if the value contains a date which is set in the future (including today)
 
 
 ### File Validation
 
-- **uniqueFileName**: returns `true` if the value a unique file name. This function expects the full path name of the file starting from the Laravel `public/` directory
+- **unique_file_name**: returns `true` if the value a unique file name. This function expects the full path name of the file starting from the Laravel `public/` directory
 
 
 ### JSON Validation
@@ -129,8 +129,8 @@ rules that Laravel already provides to you:
 
 ### Password Validation
 
-- **validPassword**: returns `true` is the value contains a valid password (at least 6 characters long, at least one lowercase letter, at least one uppercase letter and at least one number) 
-- **correctPassword**: returns `true` if the value contains the correct password for the authenticated user (does not try to re-authenticate the user)
+- **valid_password**: returns `true` is the value contains a valid password (at least 6 characters long, at least one lowercase letter, at least one uppercase letter and at least one number) 
+- **correct_password**: returns `true` if the value contains the correct password for the authenticated user (does not try to re-authenticate the user)
 
 
 ### String Validation
@@ -140,13 +140,13 @@ rules that Laravel already provides to you:
 
 ### Telephone Validation
 
-- **telephoneNumber**: returns `true` if the value contains a valid (Belgian) telephone number
+- **telephone_number**: returns `true` if the value contains a valid (Belgian) telephone number
 
 
 ### Time Validation
 
 - **time**: returns `true` if the value contains a valid timestamp
-- **timeFormat**: returns `true` if the value contains a timestamp with the specified format
+- **time_format**: returns `true` if the value contains a timestamp with the specified format
 
 
 ### Truthy Validation
@@ -157,8 +157,8 @@ rules that Laravel already provides to you:
 
 ### User Validation
 
-- **emailBelongsToAuthenticatedUser**: returns `true` if the value contains an email address which belongs to the authenticated user
-- **idBelongsToAuthenticatedUser**: returns `true` if the value contains an ID which belongs to the authenticated user 
+- **email_belongs_to_authenticated_user**: returns `true` if the value contains an email address which belongs to the authenticated user
+- **id_belongs_to_authenticated_user**: returns `true` if the value contains an ID which belongs to the authenticated user 
 
 
 Have fun!
