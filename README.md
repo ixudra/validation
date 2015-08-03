@@ -1,7 +1,7 @@
 ixudra/validation
 ======================
 
-Custom PHP validation library - developed by Ixudra.
+Custom PHP validation library - developed by [Ixudra](http://ixudra.be).
 
 This package provides a wide variety of validation rules for PHP web applications. These rules can be used to easily validate
 user input to make sure that it meets the requirements that you have set.

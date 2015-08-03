@@ -1,7 +1,7 @@
 {
     "name": "ixudra/validation",
     "description": "Custom Laravel validation library - developer by Ixudra",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "keywords": ["Ixudra", "Laravel", "Validation"],
     "homepage": "http://ixudra.be",
     "license": "MIT",
@@ -19,8 +19,8 @@
     },
 
     "require-dev": {
-        "phpunit/phpunit" : "4.*",
-        "mockery/mockery": "dev-master@dev"
+        "phpunit/phpunit" : "~4.6",
+        "mockery/mockery": "~0.9"
     },
 
     "autoload": {
