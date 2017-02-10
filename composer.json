@@ -27,7 +27,5 @@
         "psr-4": {
             "Ixudra\\Validation\\": "src/"
         }
-    },
-
-    "minimum-stability": "stable"
+    }
 }
