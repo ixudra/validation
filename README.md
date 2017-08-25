@@ -1,6 +1,11 @@
 ixudra/validation
 ======================
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/ixudra/validation.svg?style=flat-square)](https://packagist.org/packages/ixudra/validation)
+[![license](https://img.shields.io/github/license/ixudra/validation.svg)]()
+[![StyleCI](https://styleci.io/repos/18490154/shield)](https://styleci.io/repos/18490154)
+[![Total Downloads](https://img.shields.io/packagist/dt/ixudra/validation.svg?style=flat-square)](https://packagist.org/packages/ixudra/validation)
+
 Custom PHP validation library - developed by [Ixudra](http://ixudra.be).
 
 This package provides a wide variety of validation rules for PHP web applications. These rules can be used to easily validate
